@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="../assets/js/layouts/methods.js"></script>
+    <script src="../assets/js/modules/validateSession.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../assets/font/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/alertifyjs/build/css/alertify.min.css">
+    <link rel="shortcut icon" href="../assets/img/triviall.ico" type="image/x-icon">
+    <title>Triviall | Home</title>
+</head>
+
+<body onload="nobackbutton();">
+    <div id="data-edit-id"></div>
+
+    <nav class="navbar w-100 navbar-expand-lg navbar-light bg-light">
+        <img src="../assets/img/triviall.png" alt="Logo" class="img-fluid mr-1" width="41">
+        <a href="" class="navbar-brand border-bottom">
+            Triviall
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav" aria-controls="nav"
+            aria-expanded="false">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+            <div class="navbar-nav ">
+                <div id="usernav"></div>
+                <div class="dropdown mr-1">
+                    <button type="button" class="btn btn-default shadow-sm border dropdown-toggle"
+                        id="dropdownMenuOffset" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                        data-offset="10,20">
+                        <i class="fas fa-logout"></i>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
+                        <a class="dropdown-item" href="tel:3133043714">Contacto</a>
+                        <!-- <a class="dropdown-item" href="#">Soporte</a>
+                        <a class="dropdown-item" href="#">Comentarios</a> -->
+                    </div>
+                </div>
+                <div class="dropdown mr-1">
+                    <button type="button" class="btn btn-default shadow-sm border dropdown-toggle"
+                        id="dropdownMenuOffset2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                        data-offset="10,20">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset2">
+                        <a href="#" class="dropdown-item" id="destroySession">Cerrar Sesión</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- AQUI VOY -->
+    <div class="row mt-2">
+        <h3 class="col-12 text-center mt-2 mb-3"><span class="font-weight-bold border-bottom">Tema:</span>  Lenguajes de programación</h3>
+        <button class="btnIniciar btn btn-primary btn-lg m-auto shadow-lg" id="btnPlay">Jugar</button>
+    </div>
+
+    <div class="container border shadow rounded py-4 my-4 mb-5 pb-2 d-none" id="all">
+        <div class="row justify-content-center">
+            <!-- IMAGEN -->
+            <div class="col-md-6 d-flex justify-content-center">
+                <div class="guess">
+                    <img src="" width="111" id="photo" alt="Foto del Quien" draggable="false" class="blurred d-none">
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-2">
+            <!-- PREGUNTAS -->
+            <div class="col-md-8">
+                <div class="row" id="questions">
+
+                    <div class="col-md-12 p-1">
+                        <div class="row">
+                            <div class="col-md-8 col-sm-12">
+                                <textarea type="text" readonly="readonly" id="input1"
+                                    class="form-control mt-3 d-none"></textarea>
+                            </div>
+                            <div
+                                class="col-md-4 col-sm-12 d-flex justify-content-center text-center mt-3 align-self-center">
+                                <div id="checkForm1" class="d-none">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input si" name="1" id="inputSi1" value="1"
+                                            type="radio">
+                                        <label class="form-check-label">Si</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input no" name="1" id="inputNo1" value="1"
+                                            type="radio">
+                                        <label class="form-check-label">No</label>
+                                    </div>
+                                </div>
+                                <i class="fas fa-times mt-1 text-danger fa-lg d-none" id="incorrect1"></i>
+                                <i class="fas fa-check mt-1 text-success fa-lg d-none" id="correct1"></i>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-md-12 p-1">
+                        <div class="row">
+                            <div class="col-md-8 col-sm-12">
+                                <textarea type="text" readonly="readonly" id="input2"
+                                    class="form-control mt-3 d-none"></textarea>
+                            </div>
+                            <div
+                                class="col-md-4 col-sm-12 d-flex justify-content-center text-center mt-3 align-self-center">
+                                <div id="checkForm2" class="d-none">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input si" name="2" id="inputSi2" value="2"
+                                            type="radio">
+                                        <label class="form-check-label">Si</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input no" name="2" id="inputNo2" value="2"
+                                            type="radio">
+                                        <label class="form-check-label">No</label>
+                                    </div>
+                                </div>
+                                <i class="fas fa-times mt-1 text-danger fa-lg d-none" id="incorrect2"></i>
+                                <i class="fas fa-check mt-1 text-success fa-lg d-none" id="correct2"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 p-1">
+                        <div class="row">
+                            <div class="col-md-8 col-sm-12">
+                                <textarea type="text" readonly="readonly" id="input3"
+                                    class="form-control mt-3 d-none"></textarea>
+                            </div>
+                            <div
+                                class="col-md-4 col-sm-12 d-flex justify-content-center text-center mt-3 align-self-center">
+                                <div id="checkForm3" class="d-none">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input si" name="3" id="inputSi3" value="3"
+                                            type="radio">
+                                        <label class="form-check-label">Si</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input no" name="3" id="inputNo3" value="3"
+                                            type="radio">
+                                        <label class="form-check-label">No</label>
+                                    </div>
+                                </div>
+                                <i class="fas fa-times mt-1 text-danger fa-lg d-none" id="incorrect3"></i>
+                                <i class="fas fa-check mt-1 text-success fa-lg d-none" id="correct3"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 p-1">
+                        <div class="row">
+                            <div class="col-md-8 col-sm-12">
+                                <textarea type="text" readonly="readonly" id="input4"
+                                    class="form-control mt-3 d-none"></textarea>
+                            </div>
+                            <div
+                                class="col-md-4 col-sm-12 d-flex justify-content-center text-center mt-3 align-self-center">
+                                <div id="checkForm4" class="d-none">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input si" name="4" id="inputSi4" value="4"
+                                            type="radio">
+                                        <label class="form-check-label">Si</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input no" name="4" id="inputNo4" value="4"
+                                            type="radio">
+                                        <label class="form-check-label">No</label>
+                                    </div>
+                                </div>
+                                <i class="fas fa-times mt-1 text-danger fa-lg d-none" id="incorrect4"></i>
+                                <i class="fas fa-check mt-1 text-success fa-lg d-none" id="correct4"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 p-1">
+                        <div class="row">
+                            <div class="col-md-8 col-sm-12">
+                                <textarea type="text" readonly="readonly" id="input5"
+                                    class="form-control mt-3 d-none"></textarea>
+                            </div>
+                            <div
+                                class="col-md-4 col-sm-12 d-flex justify-content-center text-center mt-3 align-self-center">
+                                <div id="checkForm5" class="d-none">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input si" name="5" id="inputSi5" value="5"
+                                            type="radio">
+                                        <label class="form-check-label">Si</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input no" name="5" id="inputNo5" value="5"
+                                            type="radio">
+                                        <label class="form-check-label">No</label>
+                                    </div>
+                                </div>
+                                <i class="fas fa-times mt-1 text-danger fa-lg d-none" id="incorrect5"></i>
+                                <i class="fas fa-check mt-1 text-success fa-lg d-none" id="correct5"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3 d-none" id="results">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12">
+                                <p class="d-block text-success border-bottom" id="correctAnswers"></p>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <p class="d-block text-danger border-bottom" id="incorrectAnswers"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-12 border-left d-none" id="answerContainer">
+                        <h5 class="d-block"><strong>Respuesta:</strong></h5>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12">
+                                <input type="text" id="resp" placeholder="¿Que es?" class="form-control">
+                            </div>
+                            <div class="col-md-6 mx-md-0 px-md-0 col-sm-12" id="nodoPadre">
+                                <button class="btn btn-default border shadow" id="send">Siguiente</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/all.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <script src="../node_modules/alertifyjs/build/alertify.min.js"></script>
+    <script src="../assets/js/modules/nav.js"></script>
+    <script src="../assets/js/triviall/trivia.js"></script>
+    <script src="../assets/js/modules/sessionDestroy.js"></script>
+</body>
+
+</html>

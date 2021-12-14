@@ -1,0 +1,17 @@
+{
+  "main.css": "./static/css/main.dc11e042.chunk.css",
+  "main.js": "./static/js/main.af6dc361.chunk.js",
+  "main.js.map": "./static/js/main.af6dc361.chunk.js.map",
+  "runtime~main.js": "./static/js/runtime~main.9eb600ee.js",
+  "runtime~main.js.map": "./static/js/runtime~main.9eb600ee.js.map",
+  "static/css/2.dea6ea3c.chunk.css": "./static/css/2.dea6ea3c.chunk.css",
+  "static/js/2.f94952b4.chunk.js": "./static/js/2.f94952b4.chunk.js",
+  "static/js/2.f94952b4.chunk.js.map": "./static/js/2.f94952b4.chunk.js.map",
+  "index.html": "./index.html",
+  "precache-manifest.6dd9927639e10159f5e0181c58e3b145.js": "./precache-manifest.6dd9927639e10159f5e0181c58e3b145.js",
+  "service-worker.js": "./service-worker.js",
+  "static/css/2.dea6ea3c.chunk.css.map": "./static/css/2.dea6ea3c.chunk.css.map",
+  "static/css/main.dc11e042.chunk.css.map": "./static/css/main.dc11e042.chunk.css.map",
+  "static/media/1.ico": "./static/media/1.0e265dec.ico",
+  "static/media/Badges.css": "./static/media/stars.1d17360a.svg"
+}

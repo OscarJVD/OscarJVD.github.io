@@ -1,0 +1,16 @@
+{
+  "name": "triviall",
+  "version": "1.0.0",
+  "description": "Juego de preguntas de personajes interactivo Quien SOy?",
+  "main": "\u001b[html)",
+  "dependencies": {
+    "@popperjs/core": "^2.5.3",
+    "alertifyjs": "^1.13.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Oscar Vargas 2059344",
+  "license": "ISC"
+}

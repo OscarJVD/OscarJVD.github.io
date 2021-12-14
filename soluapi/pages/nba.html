@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../assets/app/css/apiStyles.css" rel="stylesheet">
+    <link href="../node_modules/bulma/css/bulma.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css">
+
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.css" />
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/searchpanes/1.2.0/css/searchPanes.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/select/1.3.1/css/select.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+
+    <link rel="stylesheet" href="../assets/providers/dtble/datatables/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="../assets/providers/dtble/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="../assets/providers/dtble/datatables-buttons/css/buttons.bootstrap4.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <title>Solusingapi</title>
+</head>
+
+<body>
+    <div class="tabs">
+        <ul>
+            <li>
+                <a href="../index.html" class="title txtTexto">Solusingapis</a>
+            </li>
+            <li class="navBulma ml-3">
+                <a href="rick.html" class="txtTexto">Rick and Morty</a>
+            </li>
+            <li class="navBulma mx-3">
+                <a href="pokemon.html" class="txtTexto">Pokemón</a>
+            </li>
+            <li class="navBulma mx-3">
+                <a href="pokemonFiltrado.html" class="txtTexto">Pokemón (Filtrado)</a>
+            </li>
+            <li class="navBulma">
+                <a href="nba.html" class="txtTexto">NBA</a>
+            </li>
+        </ul>
+    </div>
+
+    <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <a class="nav-link active t-white" id="players-tab" data-toggle="tab" href="#playersTab" role="tab"
+                aria-controls="players" aria-selected="true">Jugadores</a>
+            <a class="nav-link t-white" id="teams-tab" data-toggle="tab" href="#teamsTab" role="tab"
+                aria-controls="teams" aria-selected="false">Equipos</a>
+            <a class="nav-link t-white" id="games-tab" data-toggle="tab" href="#gamesTab" role="tab"
+                aria-controls="games" aria-selected="false">Juegos</a>
+        </div>
+    </nav>
+
+    <div class="tab-content" id="players-tab">
+        <div class="tab-pane fade show active" id="playersTab" role="tabpanel" aria-labelledby="players-tab">
+
+            <div class="headerContainer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6 d-flex h-100 is-align-items-center">
+                            <a href="#">
+                                <img src="../assets/app/img/prev.png" class="arrowIco" alt="imgPrev" id="btnPrev">
+                            </a>
+
+                            <h1 class="txtTexto sive-text ml-4" id="title"></h1>
+
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex h-100 is-align-items-center">
+                                <div class="autocomplete" style="width:300px;">
+                                    <input type="text" data-toggle="tooltip" data-placement="left"
+                                        title="Puedes filtrar por nombre o apellido del jugador"
+                                        placeholder="Buscar jugador" class="border form-control form-control-sm"
+                                        id="inputSearchPlayer">
+                                </div>
+                                <button type="button" class="btn btn-sm" id="viewAll">
+                                    <i class="fas fa-eye text-light"></i>
+                                </button>
+                                <div class="spinner-border text-primary d-none" id="loader" role="status">
+                                    <span class="sr-only">Loading...</span>
+                                </div>
+                                <a href="#">
+                                    <img src="../assets/app/img/next.png" class="arrowIco" alt="imgNext" id="btnNext">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mainContainer" id="mainContainer">
+
+            </div>
+
+            <div class="container mt-5 p-2" style="opacity: 0.97;">
+                <div class="row justify-content-center bg-light p-2">
+                    <div class="col-11 p-2">
+                        <h1 class="border-bottom pb-1">Comparaciones</h1>
+                        <div id="comparison-table-players"></div>
+                    </div>
+                </div>
+                <!-- <div class="row h-100">
+                    <div class="col-md-6 col-sm-12 item">
+                        <canvas id="myChart" width="400" height="400"></canvas>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <div class="tab-pane fade" id="teamsTab" role="tabpanel" aria-labelledby="teams-tab">
+            <div class="headerContainer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 has-text-centered">
+                            <h1 class="txtTexto sive-text" id="title2"></h1>
+                            <p class="has-text-white">Este punto de conexión recupera todos los equipos de la temporada
+                                actual.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="mainContainer" id="mainContainer2">
+
+            </div>
+        </div>
+        <div class="tab-pane fade" id="gamesTab" role="tabpanel" aria-labelledby="games-tab">
+            <div class="headerContainer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <h1 class="txtTexto sive-text p-2" id="title3"></h1>
+                        </div>
+                        <!-- <div class="col-6">
+                            <div class="d-flex h-100 is-align-items-center">
+                                <div class="autocomplete" style="width:300px;">
+                                    <input type="text" data-toggle="tooltip" data-placement="left"
+                                        title="Puedes filtrar por nombre de equipo, fecha, puntajes o estado"
+                                        placeholder="Buscar juego" class="border form-control form-control-sm"
+                                        id="inputSearchGame">
+                                </div>
+                                <button type="button" class="btn btn-sm" id="viewAllGames">
+                                    <i class="fas fa-eye text-light"></i>
+                                </button>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="mainContainer" id="mainContainer3">
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+        integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+    <script src="../assets/providers/dtble/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="../assets/providers/dtble/datatables/js/dataTables.bootstrap4.min.js"></script>
+
+    <script src="../assets/providers/dtble/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../assets/providers/dtble/datatables-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="../assets/providers/dtble/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <script src="../assets/providers/dtble/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+    <script src="../assets/providers/dtble/jszip/jszip.min.js"></script>
+    <script src="../assets/providers/dtble/pdfmake/pdfmake.min.js"></script>
+    <script src="../assets/providers/dtble/pdfmake/vfs_fonts.js"></script>
+    <script src="../assets/providers/dtble/datatables-buttons/js/buttons.html5.min.js"></script>
+    <script src="../assets/providers/dtble/datatables-buttons/js/buttons.print.min.js"></script>
+    <script src="../assets/providers/dtble/datatables-buttons/js/buttons.colVis.min.js"></script>
+    <script src="../assets/providers/dtble/datatables-editor/dataTables.editor.min.js"></script>
+    <script src="../assets/providers/dtble/datatables-editor/dataTables.select.min.js"></script>
+
+    <!-- archivo en el cual se establece el statable por el id de la página -->
+    <script src="../assets/providers/dtble/datatables/js/call-datatable.js"></script>
+    <!-- VIEW MORE NBA DETAILS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js">
+
+    </script>
+
+    <script src="../assets/app/js/methods/basic.js"></script>
+    <script>
+        function datatable(tableId) {
+            $(`#${tableId}`).DataTable({
+                "order": [[1, "asc"]],
+                "responsive": true,
+                "lengthChange": false,
+                "autoWidth": false
+            }).buttons().container().appendTo('#table_wrapper .col-md-6:eq(0)');
+        }
+
+
+        // var ctx = document.getElementById('myChart').getContext('2d');
+        // var myChart = new Chart(ctx, {
+        //     type: 'bar',
+        //     data: {
+        //         labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
+        //             'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'
+        //         ],
+        //         datasets: [{
+        //             label: 'Est',
+        //             data: arrMonthlyGain,
+        //             backgroundColor: [
+        //                 'rgba(255, 99, 132, 0.2)',
+        //                 'rgba(54, 162, 235, 0.2)',
+        //                 'rgba(255, 206, 86, 0.2)',
+        //                 'rgba(75, 192, 192, 0.2)',
+        //                 'rgba(153, 102, 255, 0.2)',
+        //                 'rgba(255, 159, 64, 0.2)',
+        //                 'rgba(255, 159, 64, 0.2)',
+        //                 'rgba(255, 159, 64, 0.2)',
+        //                 'rgba(255, 159, 64, 0.2)',
+        //                 'rgba(255, 159, 64, 0.2)',
+        //                 'rgba(255, 159, 64, 0.2)',
+        //                 'rgba(255, 159, 64, 0.2)'
+        //             ],
+        //             borderColor: [
+        //                 'rgba(255, 99, 132, 1)',
+        //                 'rgba(54, 162, 235, 1)',
+        //                 'rgba(255, 206, 86, 1)',
+        //                 'rgba(75, 192, 192, 1)',
+        //                 'rgba(153, 102, 255, 1)',
+        //                 'rgba(255, 159, 64, 1)',
+        //                 'rgba(255, 159, 64, 1)',
+        //                 'rgba(255, 159, 64, 1)',
+        //                 'rgba(255, 159, 64, 1)',
+        //                 'rgba(255, 159, 64, 1)',
+        //                 'rgba(255, 159, 64, 1)',
+        //                 'rgba(255, 159, 64, 1)'
+        //             ],
+        //             borderWidth: 1
+        //         }]
+        //     },
+        //     options: {
+        //         scales: {
+        //             yAxes: [{
+        //                 ticks: {
+        //                     beginAtZero: true
+        //                 }
+        //             }]
+        //         }
+        //     }
+        // });
+    </script>
+    <script src="../assets/app/js/apiNba.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+
+    </script>
+
+</body>
+
+</html>

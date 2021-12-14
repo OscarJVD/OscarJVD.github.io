@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../assets/app/css/apiStyles.css" rel="stylesheet">
+    <link href="../node_modules/bulma/css/bulma.min.css" rel="stylesheet">
+    <title>Solusingapi</title>
+</head>
+
+<body>
+    <div class="tabs">
+        <ul>
+            <li>
+                <a href="../index.html" class="title txtTexto">Solusingapis</a>
+            </li>
+            <li class="navBulma ml-3">
+                <a href="rick.html" class="txtTexto">Rick and Morty</a>
+            </li>
+            <li class="navBulma mx-3">
+                <a href="pokemon.html" class="txtTexto">Pokemón</a>
+            </li>
+            <li class="navBulma mx-3">
+                <a href="pokemonFiltrado.html" class="txtTexto">Pokemón (Filtrado)</a>
+            </li>
+            <li class="navBulma">
+                <a href="nba.html" class="txtTexto">NBA</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="headerContainer">
+        <a href="#">
+            <img src="../assets/app/img/prev.png" class="arrowIco" alt="imgPrev" id="btnPrev">
+        </a>
+
+        <h1 class="txtTexto" id="title"></h1>
+
+        <a href="#">
+            <img src="../assets/app/img/next.png" class="arrowIco" alt="imgNext" id="btnNext">
+        </a>
+    </div>
+
+    <div class="mainContainer" id="mainContainer">
+
+    </div>
+    <script src="../assets/app/js/methods/basic.js"></script>
+
+    <script src="../assets/app/js/apiRick.js"></script>
+</body>
+
+</html>

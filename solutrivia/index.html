@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="node_modules/alertifyjs/build/css/alertify.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="shortcut icon" href="assets/img/triviall.ico" type="image/x-icon">
+  <script src="assets/js/layouts/methods.js"></script>
+
+  <title>Triviall</title>
+</head>
+
+<body onload="nobackbutton()" class="bg-secondary">
+  <div class="container mt-1 pt-5">
+    <div class="card mx-auto border shadow-sm">
+      <div class="card-header border-bottom-0 bg-transparent text-center">
+        <img src="assets/img/triviall.png" width="140" class="img-fluid" alt="LogoTriviall">
+        <ul class="nav nav-tabs justify-content-center pt-4" id="pills-tab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active text-primary border" id="pills-login-tab" data-toggle="pill" href="#pills-login"
+              role="tab" aria-controls="pills-login" aria-selected="true">Ingresar</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link text-primary border" id="pills-register-tab" data-toggle="pill" href="#pills-register"
+              role="tab" aria-controls="pills-register" aria-selected="false">Registrarse</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="card-body pb-4">
+        <div class="tab-content" id="pills-tabContent">
+          <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="pills-login-tab">
+            <form id="loginForm">
+              <div class="row">
+                <div class="col-sm-12 col-md-6">
+                  <div class="form-group">
+                    <input type="text" autocomplete="on" name="email_or_username" class="form-control"
+                      id="email_or_username" placeholder="Correo electrónico o usuario" required="on"
+                      autofocus="autofocus">
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="form-group">
+                    <input type="password" name="password" class="form-control" id="password" id="password"
+                      placeholder="Ingrese contraseña" required>
+                  </div>
+                </div>
+              </div>
+
+              <!-- <div class="custom-control custom-checkbox">
+                <input class="custom-control-input" id="customCheck1" checked="" type="checkbox">
+                <label class="custom-control-label" for="customCheck1">Check me out</label>
+              </div> -->
+
+              <div class="text-center pt-4">
+                <button type="submit" id="login" class="btn btn-primary">Ingresar</button>
+              </div>
+              <!--
+              <div class="text-center pt-3">
+                <a class="btn btn-link text-primary" href="#">Forgot Your Password?</a>
+              </div> -->
+            </form>
+          </div>
+
+          <div class="tab-pane fade" id="pills-register" role="tabpanel" aria-labelledby="pills-register-tab">
+            <form id="registerForm">
+              <div class="form-group">
+                <input type="text" minlength="2" maxlength="75" name="username" id="username" class="form-control"
+                  placeholder="Ingrese nombre de usuario" required="true" autofocus>
+              </div>
+
+              <div class="form-group">
+                <input type="email" minlength="3" maxlength="350" name="email" id="email" class="form-control"
+                  placeholder="Ingrese su correo electrónico" required="true">
+              </div>
+
+
+              <div class="row">
+                <div class="col-sm-12 col-md-6">
+                  <div class="form-group">
+                    <input type="password" minlength="8" maxlength="200" name="password_register" id="password_register"
+                      class="form-control" placeholder="Ingrese una contraseña" required="true"
+                      pattern="[A-Za-z0-9!?-]{8,12}"
+                      title="Debe iniciar por una letra, debe contener mayúsculas, minúsculas, al menos un dígito y sin caracteres especiales">
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="form-group">
+                    <input type="password" minlength="8" maxlength="200" name="password_confirm" id="password_confirm"
+                      class="form-control" placeholder="Confirme su contraseña" required="true"
+                      pattern="[A-Za-z0-9!?-]{8,12}" title="Las contraseñas deben ser iguales">
+                  </div>
+                </div>
+              </div>
+
+              <div class="text-center pt-2 pb-1">
+                <button type="submit" class="btn btn-primary">Registrarse</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/layouts/methods.js"></script>
+
+  <script src="assets/js/all.js"></script>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+  <script src="node_modules/alertifyjs/build/alertify.min.js"></script>
+
+  <!-- Validator.js -->
+  <!-- <script src="assets/plugins/validator.js/jquery.validate.min.js"></script>
+  <script src="assets/plugins/validator.js/messages_es.js"></script> -->
+
+  <script src="assets/js/modules/register.js"></script>
+  <script src="assets/js/modules/login.js"></script>
+
+
+</body>
+
+</html>
