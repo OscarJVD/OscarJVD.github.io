@@ -189,3 +189,7 @@ a.anchor {
 hr {
     width: 25%;
 }
+
+.zIndexLast {
+    z-index: 100 !important;
+}
