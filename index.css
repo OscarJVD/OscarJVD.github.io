@@ -29,10 +29,10 @@ a.anchor {
     background-image: url(https://raw.githubusercontent.com/hash004/freecodecamp/master/portfolioPage/images/home.jpg);
     background-size: cover;
     background-position: center;
-    height: 100%;
+    height: 100rem;
     margin-top: 50px;
     padding-top: 15%;
-    padding-bottom: 50px;
+    padding-bottom: 70px;
     color: #fff;
     font-size: 3em;
     text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.5), 0px 18px 23px rgba(0, 0, 0, 0.1);
@@ -55,9 +55,15 @@ a.anchor {
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
-    height: 100%;
+    height: 120rem;
     padding-bottom: 50px;
     color: #fff;
+}
+
+@media (max-width: 768px) {
+    #portfolio {
+        display: none !important;
+    }
 }
 
 #portfolio h1 {
@@ -114,8 +120,8 @@ a.anchor {
     background-image: url(https://raw.githubusercontent.com/hash004/freecodecamp/master/portfolioPage/images/about.jpg);
     background-position: center;
     background-size: cover;
-    height: 100%;
-    padding-bottom: 50px;
+    height: 60rem;
+    padding-bottom: 60px;
     color: #fff;
 }
 
@@ -148,7 +154,7 @@ a.anchor {
     background-image: url(https://raw.githubusercontent.com/hash004/freecodecamp/master/portfolioPage/images/contact.jpg);
     background-position: center;
     background-size: cover;
-    height: 100%;
+    height: 100rem;
     padding-bottom: 50px;
     color: #fff;
 }
