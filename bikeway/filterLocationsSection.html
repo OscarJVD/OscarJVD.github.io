@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="stylesheet" href="styles.css" />
+    <title>BikeWay</title>
+  </head>
+  <body>
+    <div class="destination">
+      <div class="actions">
+        <div class="backButton" id="backButton">
+          <img src="img/backIcon.png" alt="Volver | Botón" />
+        </div>
+        <input
+          class="searchInput"
+          type="text"
+          placeholder="¿Cuál es tu destino?"
+        />
+      </div>
+      <div class="locationSearchResults">
+        <div class="result">
+          <div class="direction">
+            <h1>Parque Simón Bolívar</h1>
+            <p>132a-52 Carrera 140, Bogotá</p>
+          </div>
+          <div class="distance">
+            <span> 4 </span>
+            <span> km </span>
+          </div>
+        </div>
+        <div class="result">
+          <div class="direction">
+            <h1>Universidad Piloto de Colombia</h1>
+            <p>9-18 Calle 45, Bogotá </p>
+          </div>
+          <div class="distance">
+            <span> 12 </span>
+            <span> km </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let backButton = document.getElementById("backButton");
+      backButton.addEventListener("click", () => {
+        window.location.href = "mainMenuMap.html";
+      });
+    </script>
+  </body>
+</html>

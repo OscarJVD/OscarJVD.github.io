@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="stylesheet" href="styles.css" />
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6HQWvYoBa0cw3IJVPrzBY1VbliGyFOdc&libraries=places"></script>
+    <title>BikeWay</title>
+  </head>
+  <body>
+    <div class="viewLocation">
+      <div class="map" id="map"></div>
+      <div class="previewSearch">
+        <div class="lineOpenFilter">
+          <div class="lineOpen"></div>
+        </div>
+        <div class="whereInput" id="whereInput" role="button" tabindex="0">
+          <img
+            src="img/search-where-icon.png"
+            alt="¿Cuál es tu destino? | Icono"
+          />
+          <input
+            class="previewSearchInput"
+            type="text"
+            placeholder="¿Cuál es tu destino?"
+          />
+        </div>
+        <div class="myConfigButton">
+          <img src="img/locationIcon.png" alt="Configuración | Icono" />
+          <span> Mi BikeWay </span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let whereInput = document.getElementById("whereInput");
+      whereInput.addEventListener("click", () => {
+        window.location.href = "filterLocationsSection.html";
+      });
+
+      // Función de inicialización del mapa
+      // Función de inicialización del mapa
+      function initMap() {
+        // Crea una instancia del mapa
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 14,
+        });
+
+        // Obtiene la ubicación del usuario
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(
+            function (position) {
+              const userLocation = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude,
+              };
+
+              // Centra el mapa en la ubicación del usuario
+              map.setCenter(userLocation);
+
+              // Crea una instancia de la clase DirectionsService
+              const directionsService = new google.maps.DirectionsService();
+
+              // Crea una instancia de la clase DirectionsRenderer
+              const directionsRenderer = new google.maps.DirectionsRenderer({
+                map: map,
+              });
+
+              // Configura la solicitud de dirección
+              const request = {
+                origin: userLocation,
+                destination: "Alemania",
+                travelMode: google.maps.TravelMode.BICYCLING,
+              };
+
+              // Envía la solicitud de dirección
+              directionsService.route(request, function (response, status) {
+                if (status === google.maps.DirectionsStatus.OK) {
+                  // Dibuja la ruta en el mapa
+                  directionsRenderer.setDirections(response);
+                }
+              });
+            },
+            function () {
+              // Manejo de errores en caso de no poder obtener la ubicación del usuario
+              // Aquí puedes mostrar un mensaje de error o realizar una acción alternativa
+            }
+          );
+        } else {
+          // Manejo de errores en caso de que el navegador no admita la geolocalización
+          // Aquí puedes mostrar un mensaje de error o realizar una acción alternativa
+        }
+      }
+
+      window.onload = function () {
+        initMap();
+      };
+    </script>
+  </body>
+</html>

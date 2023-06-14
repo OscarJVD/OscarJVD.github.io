@@ -1,0 +1,240 @@
+body,
+* {
+  margin: 0;
+  padding: 0;
+  border-sizing: border-box;
+}
+
+.bg-ride {
+  background-image: url("./img/bg-ride.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.presentation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10rem;
+  height: 100%;
+}
+
+.logo{
+  padding-top: 2rem;
+}
+
+.loginBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  height: 68px;
+  width: calc(100% - 2rem);
+  text-align: center;
+  border-radius: 40px;
+  padding-bottom: 2rem;
+}
+
+.loginBtn > a {
+  text-decoration: none;
+  color: white;
+  font-family: "Nunito", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 35px;
+  width: 100%;
+  padding: 1rem 2rem;
+  border-radius: inherit;
+  background-color: #18b8cae3;
+}
+
+/* 2 page */
+.viewLocation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: -1rem;
+  height: 100vh;
+}
+
+.viewLocation .map {
+  flex: 3;
+}
+
+.viewLocation .previewSearch {
+  flex: 1;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 20px;
+}
+
+.previewSearch{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem
+  /* justify-content: space-between; */
+}
+
+.lineOpenFilter{
+  padding-top: 9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 4px;
+}
+
+.lineOpen {
+  width: 100%;
+  max-width: 37px;
+  height: inherit;
+  background: #656565;
+  border-radius: 20px;
+}
+
+.whereInput {
+  position: relative;
+  width: 100%
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.whereInput img {
+  position: absolute;
+  z-index: 1;
+  top: 1rem;
+  left: 2rem;
+}
+
+.previewSearchInput {
+  background: rgba(240, 240, 240, 0.85);
+  border-radius: 40px;
+  border: 0;
+  padding: 1rem 4.2rem;
+  position: relative;
+  width: -webkit-fill-available;
+  max-width: 100%;
+  font-family: "Nunito", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+  color: #656565;
+}
+
+.searchInput {
+  background: rgba(240, 240, 240, 0.85);
+  border-radius: 40px;
+  border: 0;
+  padding: 1rem 1.5rem;
+  position: relative;
+
+  font-family: "Nunito", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+  color: #656565;
+}
+
+.map{
+  height: 100%;
+  width: 100%;
+}
+
+.myConfigButton{
+  border-top: 4px solid #F0F0F0;
+  padding: 0.8rem;
+  display: flex;
+  gap: 0.2rem;
+  align-items: center;
+}
+
+.myConfigButton > span{
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 30px;
+    color: #656565;
+}
+
+.destination{
+  display: flex;
+  flex-direction: column;
+}
+
+.destination .actions{
+  flex: 1;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.destination .locationSearchResults{
+  flex: 4;
+}
+
+.backButton{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 50% 50%;
+  background: #F0F0F0;
+  cursor: pointer;
+}
+
+.locationSearchResults{
+  border-top: 4px solid #F0F0F0;
+}
+
+.locationSearchResults .result{
+  padding: 1.5rem;
+  border-bottom: 2px solid #F0F0F0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.direction h1{
+  font-family: 'Nunito', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 27px;
+  color: #000000;
+}
+
+.direction p{
+  font-family: 'Nunito', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.distance{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.1rem;
+  font-family: 'Nunito', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 15px;
+  line-height: 20px;
+  color: #656565;
+}
