@@ -1,237 +1,381 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OVARGAS | Portafolio</title>
+    <meta
+      name="description"
+      content="Portafolio publico de Oscar Vargas con proyectos, stack tecnico y trayectoria, sin datos de contacto ni ubicacion."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="#inicio">
+          <img src="logo-ovargas.webp" alt="Logo OVARGAS" />
+          <span>OVARGAS Portfolio</span>
+        </a>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Portafolio OVARGAS</title>
-    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
-    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
-    <link rel="stylesheet" href="index.css">
+        <nav class="site-nav" aria-label="Navegacion principal">
+          <a href="#perfil">Perfil</a>
+          <a href="#stack">Stack</a>
+          <a href="#proyectos">Proyectos</a>
+          <a href="#laboratorio">Laboratorio</a>
+        </nav>
+      </header>
 
-    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+      <main>
+        <section class="hero" id="inicio">
+          <div class="hero-copy">
+            <p class="eyebrow">Software engineer / web developer</p>
+            <h1>
+              Una portada OVARGAS mas clara, moderna y enfocada en trabajo
+              real.
+            </h1>
+            <p class="hero-lead">
+              Esta version combina recursos del portfolio anterior con una
+              presentacion publica mas cuidada: mejor jerarquia visual, stack
+              tecnico, educacion y trabajo destacado, sin exponer datos de
+              contacto ni ubicacion.
+            </p>
 
-</head>
-
-<body>
-
-    <!-- Start Navigation Bar -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-                <span class="navbar-brand">Óscar Vargas</span>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#proyectos">
+                Ver proyectos destacados
+              </a>
+              <a class="button button-secondary" href="#stack">
+                Explorar stack tecnico
+              </a>
             </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#home">Inicio <span class="sr-only">(current)</span></a></li>
-                </ul>
+            <ul class="role-pills" aria-label="Roles y enfoque">
+              <li>Next.js</li>
+              <li>React</li>
+              <li>TypeScript</li>
+              <li>Product builder</li>
+              <li>Freelancer</li>
+              <li>Creative developer</li>
+            </ul>
+          </div>
 
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#portfolio-link">Portafolio</a></li>
-                    <li><a href="#about-link">Presentación</a></li>
-                </ul>
+          <div class="hero-visual">
+            <div class="photo-frame">
+              <img
+                src="profile-photo.png"
+                alt="Retrato de Oscar Vargas"
+                loading="eager"
+              />
             </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
-    <!-- End Navagation Bar -->
 
-    <!-- Start Splash Section  -->
-    <a class="anchor" id="home"></a>
-    <div id="splash" class="container-fluid">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h1>Óscar Vargas</h1>
-                <hr />
+            <div class="floating-card card-top">
+              <span class="floating-label">Enfoque principal</span>
+              <strong>Interfaces modernas con entrega full-stack</strong>
+            </div>
+
+            <div class="floating-card card-bottom">
+              <span class="floating-label">Version publica</span>
+              <strong>Sin contacto, direccion ni ubicacion visible</strong>
+            </div>
+          </div>
+        </section>
+
+        <section class="summary-grid" aria-label="Resumen profesional">
+          <article class="summary-card">
+            <p class="summary-kicker">Diseno y producto</p>
+            <h2>Interfaces con intencion visual</h2>
+            <p>
+              Reuso la energia del sitio anterior de OVARGAS, pero la convierto
+              en una portada mas editorial, mas legible y mejor pensada para
+              mostrar trabajo.
+            </p>
+          </article>
+
+          <article class="summary-card">
+            <p class="summary-kicker">Construccion</p>
+            <h2>Del concepto al deploy</h2>
+            <p>
+              Trabajo con frontend moderno, integraciones, APIs, pasarelas de
+              pago, paneles y experiencias web listas para negocio.
+            </p>
+          </article>
+
+          <article class="summary-card">
+            <p class="summary-kicker">Presentacion publica</p>
+            <h2>Portafolio limpio y controlado</h2>
+            <p>
+              Esta version se concentra solo en experiencia, stack, educacion y
+              proyectos, dejando por fuera bloques de contacto o ubicacion.
+            </p>
+          </article>
+        </section>
+
+        <section class="content-section" id="perfil">
+          <div class="section-heading">
+            <p class="eyebrow">Perfil</p>
+            <h2>Una presentacion mas fuerte, sin exponer informacion privada</h2>
+          </div>
+
+          <div class="profile-layout">
+            <article class="profile-card profile-card-large">
+              <h3>Que construyo</h3>
+              <p>
+                Productos web con una mezcla de claridad visual, logica de
+                negocio y ejecucion tecnica. Me interesa que cada interfaz se
+                vea bien, pero tambien que convierta, explique y funcione con
+                fluidez.
+              </p>
+            </article>
+
+            <article class="profile-card">
+              <h3>Como trabajo</h3>
+              <p>
+                Diseno sistemas pequenos y mantenibles, priorizo velocidad de
+                entrega y organizo el desarrollo para que el producto pueda
+                crecer con menos friccion.
+              </p>
+            </article>
+
+            <article class="profile-card">
+              <h3>Intereses</h3>
+              <ul class="bullet-list">
+                <li>Crear productos propios</li>
+                <li>Mejorar interfaces y UX</li>
+                <li>Combinar contenido, codigo y negocio</li>
+                <li>Construir experiencias web memorables</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="content-section" id="stack">
+          <div class="section-heading">
+            <p class="eyebrow">Stack</p>
+            <h2>Recursos heredados del portfolio anterior, reorganizados mejor</h2>
+          </div>
+
+          <div class="stack-grid">
+            <article class="stack-card">
+              <h3>Frontend</h3>
+              <div class="chip-group">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript</span>
+                <span>TypeScript</span>
+                <span>React</span>
+                <span>Next.js</span>
+                <span>Tailwind CSS</span>
+                <span>Responsive UI</span>
+              </div>
+            </article>
+
+            <article class="stack-card">
+              <h3>Backend y datos</h3>
+              <div class="chip-group">
+                <span>Node.js</span>
+                <span>NestJS</span>
+                <span>Spring Boot</span>
+                <span>PHP</span>
+                <span>Python</span>
+                <span>MySQL</span>
+                <span>MongoDB</span>
+                <span>PostgreSQL</span>
+              </div>
+            </article>
+
+            <article class="stack-card">
+              <h3>Herramientas y flujo</h3>
+              <div class="chip-group">
+                <span>Git</span>
+                <span>GitHub</span>
+                <span>Docker</span>
+                <span>VS Code</span>
+                <span>APIs</span>
+                <span>AWS</span>
+                <span>Mercado Pago</span>
+                <span>Product delivery</span>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="content-section" id="proyectos">
+          <div class="section-heading">
+            <p class="eyebrow">Proyectos destacados</p>
+            <h2>Una mezcla entre el portfolio moderno de OVARGAS y el archivo del sitio clasico</h2>
+          </div>
+
+          <div class="project-grid">
+            <article class="project-card project-card-featured">
+              <div class="project-meta">
+                <span>Featured</span>
+                <span>Social media automation</span>
+              </div>
+              <h3>Social Publisher</h3>
+              <p>
+                Plataforma para automatizar y programar contenido en multiples
+                redes sociales con una experiencia visual moderna y orientacion
+                a producto.
+              </p>
+              <ul class="tag-list">
+                <li>Next.js</li>
+                <li>APIs sociales</li>
+                <li>AWS</li>
+                <li>Automation</li>
+              </ul>
+              <a href="https://socialpublisher.co" target="_blank" rel="noopener noreferrer">
+                Abrir proyecto
+              </a>
+            </article>
+
+            <article class="project-card">
+              <div class="project-meta">
+                <span>Commerce</span>
+                <span>Repair services</span>
+              </div>
+              <h3>Solumobil</h3>
+              <p>
+                Servicio tecnico y e-commerce orientado a dispositivos
+                moviles, con reservas, catalogo y una base de producto clara.
+              </p>
+              <ul class="tag-list">
+                <li>Next.js</li>
+                <li>Node.js</li>
+                <li>Mercado Pago</li>
+              </ul>
+              <a href="https://solumobil.vercel.app" target="_blank" rel="noopener noreferrer">
+                Abrir proyecto
+              </a>
+            </article>
+
+            <article class="project-card">
+              <div class="project-meta">
+                <span>Freelancing</span>
+                <span>Brand site</span>
+              </div>
+              <h3>Steffany Guarnizo</h3>
+              <p>
+                Sitio profesional para reservas, portafolio y presencia digital
+                de una especialista en belleza con enfoque comercial.
+              </p>
+              <ul class="tag-list">
+                <li>Next.js</li>
+                <li>Tailwind</li>
+                <li>Bookings</li>
+              </ul>
+              <a href="https://www.manicuristasteffa.co/" target="_blank" rel="noopener noreferrer">
+                Abrir proyecto
+              </a>
+            </article>
+
+            <article class="project-card">
+              <div class="project-meta">
+                <span>Interactive</span>
+                <span>Campaign microsite</span>
+              </div>
+              <h3>Feliz Dia Mamita</h3>
+              <p>
+                Mini experiencia interactiva con tono emocional y visual
+                expresivo para una campana especial.
+              </p>
+              <ul class="tag-list">
+                <li>Next.js</li>
+                <li>Shadcn</li>
+                <li>AI</li>
+              </ul>
+              <a href="https://felizdiamamita.vercel.app/" target="_blank" rel="noopener noreferrer">
+                Abrir proyecto
+              </a>
+            </article>
+          </div>
+        </section>
+
+        <section class="content-section timeline-section">
+          <div class="section-heading">
+            <p class="eyebrow">Trayectoria</p>
+            <h2>Formacion y continuidad tecnica</h2>
+          </div>
+
+          <div class="timeline">
+            <article class="timeline-item">
+              <span class="timeline-date">2021 - 2024</span>
+              <div class="timeline-copy">
+                <h3>Software Engineering Undergraduate</h3>
+                <p class="timeline-place">Politecnico Grancolombiano University</p>
                 <p>
-                    Desarrollador de pila completa / Desarrollador de software web
+                  Etapa enfocada en fundamentos de desarrollo, bases de datos,
+                  analisis de sistemas y ejecucion de proyectos individuales y
+                  colaborativos con tecnologias actuales.
                 </p>
-            </div>
-        </div>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <span class="timeline-date">Base tecnica</span>
+              <div class="timeline-copy">
+                <h3>Tecnologo ADSI</h3>
+                <p class="timeline-place">Formacion aplicada al desarrollo de software</p>
+                <p>
+                  Base practica para analisis, desarrollo y despliegue de
+                  soluciones web, que luego se expandio hacia proyectos de
+                  producto, servicios y plataformas modernas.
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="content-section" id="laboratorio">
+          <div class="section-heading">
+            <p class="eyebrow">Laboratorio web</p>
+            <h2>Proyectos historicos que siguen aportando personalidad al dominio</h2>
+          </div>
+
+          <div class="legacy-grid">
+            <a class="legacy-card" href="https://oscarjvd.github.io/solumemo/" target="_blank" rel="noopener noreferrer">
+              <h3>Solumemo</h3>
+              <p>Juego de memoria con una capa visual mas experimental.</p>
+            </a>
+
+            <a class="legacy-card" href="https://oscarjvd.github.io/solutrivia/" target="_blank" rel="noopener noreferrer">
+              <h3>Solutrivia</h3>
+              <p>Cuestionario interactivo orientado a practica y dinamica de juego.</p>
+            </a>
+
+            <a class="legacy-card" href="https://oscarjvd.github.io/solubets/" target="_blank" rel="noopener noreferrer">
+              <h3>Solubets</h3>
+              <p>Proyecto ludico para apuestas y logica del lado cliente.</p>
+            </a>
+
+            <a class="legacy-card" href="https://oscarjvd.github.io/soluapi/" target="_blank" rel="noopener noreferrer">
+              <h3>Soluapi</h3>
+              <p>Consumo de APIs y ensamblaje de informacion en una sola app.</p>
+            </a>
+
+            <a class="legacy-card" href="https://oscarjvd.github.io/soluzi/" target="_blank" rel="noopener noreferrer">
+              <h3>Soluzi</h3>
+              <p>Exploracion de interfaz y flujo de producto dentro del dominio historico.</p>
+            </a>
+
+            <a class="legacy-card" href="https://oscarjvd.github.io/bikeway/" target="_blank" rel="noopener noreferrer">
+              <h3>Bikeway</h3>
+              <p>Concepto de movilidad con interfaz simple y enfoque experimental.</p>
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>OVARGAS public portfolio</p>
+        <p>Version curada sin secciones de contacto, direccion ni ubicacion.</p>
+      </footer>
     </div>
-    <!-- End Splash Section  -->
-
-    <!-- Start portfolio Section  -->
-    <a class="anchor" id="portfolio-link"></a>
-    <div id="portfolio" class="container-fluid">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h1>Portafolio</h1>
-                <hr />
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <div class="thumbnail">
-                                <a href="https://solumobil.com" target="_blank">
-                                    <div class="thumbnail-hover text-center zIndexLast">
-                                        <i class="fa fa-eye fa-4x"></i>
-                                    </div>
-                                    <!-- <img class="img-responsive" src="https://raw.githubusercontent.com/hash004/freecodecamp/master/portfolioPágina/images/projects/tribute-page.png" alt="bruce-lee-tribute-page"> -->
-                                    <div class="embed-responsive embed-responsive-4by3">
-                                        <iframe src="https://www.solumobil.com" style="border:0" loading="lazy"></iframe>
-                                    </div>
-                                </a>
-                                <div class="caption">
-                                    <h3>Solumobil</h3>
-                                    <p>Ventas en línea avanzadas para un negocio de tecnología</p>
-                                    <p><strong>Stack:</strong> NextJs, MERN, Paypal, Material-ui, Redux, AWS, Bootstrap 5, CSS, etc.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="thumbnail">
-                                <a href="https://oscarjvd.github.io/solumemo/" target="_blank">
-                                    <div class="thumbnail-hover text-center zIndexLast">
-                                        <i class="fa fa-eye fa-4x"></i>
-                                    </div>
-                                    <!-- <img class="img-responsive" src="https://images.unsplash.com/photo-1430931071372-38127bd472b8?crop=entropy&dpr=2&fit=crop&fm=jpg&h=275&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=400"> -->
-
-                                    <div class="embed-responsive embed-responsive-4by3">
-                                        <iframe src="https://oscarjvd.github.io/solumemo/" style="border:0" loading="lazy"></iframe>
-                                    </div>
-                                </a>
-                                <div class="caption">
-                                    <h3>Solumemo</h3>
-                                    <p>Juego de memoria</p>
-                                    <p><strong>Stack: </strong> REACT, CSS, BOOTSTRAP, THREE.JS, FONTAWESOME, etc.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="thumbnail">
-                                <a href="https://oscarjvd.github.io/solutrivia/" target="_blank">
-                                    <div class="thumbnail-hover text-center zIndexLast">
-                                        <i class="fa fa-eye fa-4x"></i>
-                                    </div>
-                                    <!-- <img src="https://images.unsplash.com/photo-1426260193283-c4daed7c2024?crop=entropy&dpr=2&fit=crop&fm=jpg&h=250&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=400"> -->
-                                    <div class="embed-responsive embed-responsive-4by3">
-                                        <iframe src="https://oscarjvd.github.io/solutrivia/" style="border:0" loading="lazy"></iframe>
-                                    </div>
-                                </a>
-                                <div class="caption">
-                                    <h3>Triviall</h3>
-                                    <p>Cuestionario interactivo con autenticación y registro de usuarios</p>
-                                    <p><strong>Stack:</strong> JavaScript, LocalStorage, Alertify, CSS, BOOTSTRAP, HTML5, etc.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <div class="thumbnail">
-                                <a href="https://oscarjvd.github.io/solubets/" target="_blank">
-                                    <div class="thumbnail-hover text-center zIndexLast">
-                                        <i class="fa fa-eye fa-4x"></i>
-                                    </div>
-                                    <!-- <img src="https://images.unsplash.com/photo-1429728479567-9c51fb49813e?crop=entropy&dpr=2&fit=crop&fm=jpg&h=300&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=400"> -->
-                                    <div class="embed-responsive embed-responsive-4by3">
-                                        <iframe src="https://oscarjvd.github.io/solubets/" style="border:0" loading="lazy"></iframe>
-                                    </div>
-                                </a>
-                                <div class="caption">
-                                    <h3>Solubets</h3>
-                                    <p>Juego de apuestas</p>
-                                    <p><strong>Stack:</strong> CSS AVANZADO, BOOTSTRAP, JAVASCRIPT, HTML5, etc.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="thumbnail">
-                                <a href="https://oscarjvd.github.io/soluapi/" target="_blank">
-                                    <div class="thumbnail-hover text-center zIndexLast">
-                                        <i class="fa fa-eye fa-4x"></i>
-                                    </div>
-                                    <!-- <img src="https://images.unsplash.com/photo-1422480723682-a694a43341fb?crop=entropy&dpr=2&fit=crop&fm=jpg&h=275&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=400"> -->
-
-                                    <div class="embed-responsive embed-responsive-4by3">
-                                        <iframe src="https://oscarjvd.github.io/soluapi/" style="border:0" loading="lazy"></iframe>
-                                    </div>
-                                </a>
-                                <div class="caption">
-                                    <h3>Soluapi</h3>
-                                    <p>App web SOAP, compuesta del consumo de 3 apis diferentes</p>
-                                    <p><strong>Stack:</strong> JavaScript, HTML5, CSS, Bulma, Fetch
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="thumbnail">
-                                <a href="https://oscarjavier.com/" target="_blank">
-                                    <div class="thumbnail-hover text-center zIndexLast">
-                                        <i class="fa fa-eye fa-4x"></i>
-                                    </div>
-                                    <!-- <img src="https://images.unsplash.com/photo-1451968362585-6f6b322071c7?crop=entropy&dpr=2&fit=crop&fm=jpg&h=225&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=400"> -->
-                                    <div class="embed-responsive embed-responsive-4by3">
-                                        <iframe src="https://oscarjavier.com/" style="border:0" loading="lazy"></iframe>
-                                    </div>
-                                </a>
-                                <div class="caption">
-                                    <h3>oscarjavier.com</h3>
-                                    <p>Web de empresa de consultoria propia</p>
-                                    <p><strong>Stack:</strong> WP, CSS, PHP, JavaScript, Elementor
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End portfolio Section  -->
-
-    <!-- Start About Section -->
-    <a class="anchor" id="about-link"></a>
-    <div id="about" class="container-fluid text-center">
-        <h1>Presentación</h1>
-        <hr />
-        <div class="container">
-            <div class="row row-eq-height">
-                <!-- <div class="col-lg-1"></div> -->
-                <div class="col-lg-3">
-                    <img class="img-responsive img-circle center-block" src="yo.jfif" alt="Hasham-Babar" />
-                </div>
-                <div id="white-bg" class="col-lg-8">
-                    <p>
-                        Graduado cómo tecnólogo ADSI SENA. Desarrollador web de pila completa. Analista calificado en diseño arquitecturas de software con 3 mas de años de experiencia practica.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End About Section -->
-
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $(".navbar-nav li").click(function() {
-                $(".navbar-nav li").removeClass("active");
-                $(this).addClass("active");
-            });
-
-            $('.navbar-nav a').click(function(event) {
-                event.preventDefault();
-                $('html, body').animate({
-                    scrollTop: $($.attr(this, 'href')).offset().top
-                }, 500);
-            });
-
-        });
-    </script>
-</body>
-
+  </body>
 </html>
